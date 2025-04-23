@@ -14,7 +14,9 @@ function convertToObject(sourceString) {
   const arrOfArrsSplitedByAColon = [];
 
   splitedString.forEach((string) => {
-    arrOfArrsSplitedByAColon.push(string.split(':'));
+    if (string.includes(':') === true) {
+      arrOfArrsSplitedByAColon.push(string.split(':'));
+    }
   });
 
   const finishedArray = arrOfArrsSplitedByAColon.map((element) => {
